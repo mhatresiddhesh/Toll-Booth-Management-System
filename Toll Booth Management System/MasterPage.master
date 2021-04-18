@@ -1,0 +1,88 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <style type="text/css">
+        .auto-style1 {
+            width: 608px;
+        }
+        .auto-style2 {
+            height: 50px;
+        }
+        .auto-style3 {
+            width: 900px;
+        }
+        .auto-style4 {
+            font-size: x-large;
+        }
+        .auto-style6 {
+            width: 103px;
+            height: 101px;
+        }
+    </style>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <table style="width:1100px;margin: 0 auto">
+        <tr style="width:1100px;height:50px">
+            <td style="width:60px">
+                
+                <img alt="" class="auto-style6" height="90px" src="Pics/stock.jpg" width="90px" /></td>
+            <td class="auto-style1"><strong style="font-size: large">&nbsp;&nbsp;&nbsp;&nbsp; </strong><span class="auto-style4"><strong>Toll Booth Management System</strong></span></td>
+            <td style="text-align:right" class="auto-style3">
+                <asp:ImageButton ID="ImageButton1" runat="server" Height="40px" img src="Pics/insta.png" Width="40px" OnClick="ImageButton1_Click" /> &nbsp;&nbsp; <asp:ImageButton ID="ImageButton2" runat="server" Height="40px" ImageUrl="~/Pics/fb.jpg" Width="40px" OnClick="ImageButton2_Click" /> &nbsp;&nbsp; <asp:ImageButton ID="ImageButton3" runat="server" Height="40px" ImageUrl="~/Pics/tweet.png" Width="40px" OnClick="ImageButton3_Click" />
+            </td>
+        </tr>
+        <tr style="width:1100px;background-color:#5f98f3">
+            <td colspan="3" class="auto-style2">
+                <asp:Menu ID="Menu1" runat="server" Font-Bold="False" Font-Size="Large" Orientation="Horizontal" OnMenuItemClick="Menu1_MenuItemClick" Height="30px">
+                    <Items>
+                        <asp:MenuItem Text="Home" Value="Home" NavigateUrl="~/Index.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Services" Value="Services" NavigateUrl="~/Services.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Contact Us" Value="Contact" NavigateUrl="~/Contact.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="User" Value="User" NavigateUrl="~/LoginPage.aspx"></asp:MenuItem>
+                        <asp:MenuItem Text="Admin" Value="Admin" NavigateUrl="~/AdminLogin.aspx"></asp:MenuItem>
+                    </Items>
+                    <StaticHoverStyle BackColor="#000066" ForeColor="White" />
+                    <StaticMenuItemStyle ForeColor="Black" HorizontalPadding="35px" />
+                </asp:Menu>
+            </td>
+        </tr>
+    <tr style="width:1100px;height:300px">
+        <td colspan="3">
+            <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
+            <div>
+                <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                    <ContentTemplate>
+                        <asp:AdRotator ID="AdRotator1" runat="server" AdvertisementFile="~/Slider.xml" BorderColor="#000066" />
+                        <asp:Timer ID="Timer1" runat="server" Interval="3000"></asp:Timer>
+                    </ContentTemplate>
+                </asp:UpdatePanel>
+            </div>
+        </td>
+    </tr>
+        <tr style="width:1100px">
+            <td colspan="3">
+                <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+            </td>
+        </tr>
+        <tr style="width:1100px;height:50px;background-color:black;text-align:center;color:#fff">
+            <td colspan="3" style="background-color: #808080">
+                IMPORTANT LINKS: <a href="DefautRegister.aspx">User Registration</a>&nbsp&nbsp&nbsp<a href="AdminReg.aspx">Admin Registration</a> 
+            </td>
+        </tr>
+        <tr style="width:1100px;height:50px;background-color:black;text-align:center;color:#fff">
+            <td colspan="3">
+                Copyright © 2021 | SIES College of Commerce and Economics | Mhatre&Poojary LLC 
+            </td>
+        </tr>
+    </table>
+    </form>
+</body>
+</html>

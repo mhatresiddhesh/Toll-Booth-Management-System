@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Advertisements>
+  <Ad>
+    <ImageUrl>Imgslider/toll.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Imgslider/toll1.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Imgslider/toll3.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Imgslider/toll4.png</ImageUrl>
+  </Ad>
+  <Ad>
+    <ImageUrl>Imgslider/toll5.png</ImageUrl>
+  </Ad>
+</Advertisements>
